@@ -1,0 +1,426 @@
+.fondo_res{
+  background-image: url("../img/6249-messi.jpg");
+}
+
+nav{
+    margin: 30px auto 0;
+  
+    position: relative;
+    width: 800px;
+    height: 50px;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+  }
+  nav a{
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+  nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+  }
+  a:nth-child(1){
+    width: 150px;
+  }
+  a:nth-child(2){
+    width: 250px;
+  }
+  a:nth-child(3){
+    width: 100px;
+  }
+  a:nth-child(4){
+    width: 160px;
+  }
+  a:nth-child(5){
+    width: 120px;
+  }
+  nav .start-home, a:nth-child(1):hover~.animation{
+    width: 150px;
+    left: 0;
+    background-color: #1abc9c;
+  }
+  nav .start-about, a:nth-child(2):hover~.animation{
+    width: 200px;
+    left: 175px;
+    background-color: #e74c3c;
+  }
+  nav .start-blog, a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 390px;
+    background-color: #3498db;
+  }
+  nav .start-portefolio, a:nth-child(4):hover~.animation{
+    width: 160px;
+    left: 490px;
+    background-color: #9b59b6;
+  }
+  nav .start-contact, a:nth-child(5):hover~.animation{
+    width: 160px;
+    left: 660px;
+    background-color: #e67e22;
+  }
+
+  .form_reservas{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    background-color: #04335B;
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+    position: relative;
+    left: 42%;
+    top: 1px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Cherry Swash', cursive;
+    opacity: 0.87;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 20px 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Cherry Swash', cursive;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 20px 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Cherry Swash', cursive;
+  }
+
+  body{
+    font-size: 12px;
+    font-family: sans-serif;
+    background: #2c3e50;
+    background-color: #2c3e50;
+    color: #1b262c;
+
+    font-size: 100%;
+    margin: 0;
+  }
+
+  /* ---------------Galery----------------- */
+img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+
+}
+  
+
+/* hover styles */
+.location-listing {
+  position: relative;
+}
+
+.location-image {
+  line-height: 0;
+  border: 5px solid #fff;
+  overflow: hidden;
+}
+
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
+}
+
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(90,0,10,0.4);
+  color: white;
+  
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-listing:hover .location-title {
+  opacity: 1;
+}
+
+.location-listing:hover .location-image img {
+  filter: blur(2px);
+}
+
+
+/* for touch screen devices */
+@media (hover: none) { 
+  .location-title {
+    opacity: 1;
+  }
+  .location-image img {
+    filter: blur(2px);
+  }
+}
+
+/* ---------------Galery----------------- */
+
+/* efectos para el contenedor de pantalla completa */
+#contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0;
+  padding: 0;
+  min-width: 80vw;
+  min-height: 80vh;
+  width: 100%;
+  height: 100%;
+  
+  /*background-image: url("../img/fondo_difuminado_login.jpg");*/
+
+  background-image: url("../img/estadio.jpg");
+
+  background-position: center;
+  background-size: cover;
+}
+
+/* contenedor del login a la izquierda */
+#contenedorcentrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:row;
+  
+  min-width: 380px;
+  max-width: 900px;
+  width: 90%;
+  
+  background-color: #04335B;
+  
+  /*opacity: 0.50;
+  filter: alpha(opacity=50);*/
+
+  opacity: 0.80;
+  
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* formulario de login */
+/* formulario de login */
+#login {
+  width: 100%;
+  max-width: 320px;
+  min-width: 320px;
+  padding: 30px 30px 50px 30px;
+  background-color: #719192;
+  
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+  
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  
+  box-sizing: border-box;
+  
+  opacity: 1;
+  filter: alpha(opacity=1);
+}
+
+#login label {
+  display: block;
+  font-family: 'Overpass', sans-serif;
+  font-size: 120%;
+  color:#3c4245;
+  
+  margin-top: 15px;
+}
+
+#login input {
+  font-family: 'Overpass', sans-serif;
+  font-size: 110%;
+  color: #1b262c;
+  
+  display: block;
+  width: 100%;
+  height: 40px;
+  
+  margin-bottom: 10px;
+  padding: 5px 5px 5px 10px;
+  
+  box-sizing: border-box;
+  
+  border: none;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+}
+
+#login input::placeholder {
+  font-family: 'Overpass', sans-serif;
+  color: #E4E4E4;
+}
+
+#login button {
+  font-family: 'Overpass', sans-serif;
+  font-size: 110%;
+  color:#1b262c;
+  width: 100%;
+  height: 40px;
+  border: none;
+  
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  
+  background-color: #dfcdc3;
+  
+  margin-top: 10px;
+}
+
+#login button:hover {
+  background-color: #3c4245;
+  color:#dfcdc3;
+}
+/* formulario de login */
+/* formulario de login */
+
+/* seccion de la derecha */
+/* seccion de la derecha */
+/* por defecto */
+#derecho {
+  /*display: flex;
+  align-items:center;
+  justify-content:center;*/
+  
+  text-align: center;
+  width: 100%;
+  
+  opacity: 0.70;
+  filter: alpha(opacity=70);
+  
+  padding:20px 20px 20px 50px;
+  box-sizing: border-box;
+}
+
+.titulo {
+  font-size: 300%;
+  color:#dfcdc3;
+}
+
+.logo-empresa img {
+  width: 60%;
+}
+
+hr {
+  border-top: 1px solid #8c8b8b;
+border-bottom: 1px solid #dfcdc3;
+  
+}
+.pie-form {
+  font-size: 90%;
+  text-align: center;    
+  margin-top: 15px;
+}
+
+.pie-form a {
+  display: block;
+  text-decoration: none;
+  color: #dfcdc3;
+  margin-bottom: 3px;
+}
+
+.pie-form a:hover {
+  color: #719192;
+}
+/* seccion de la derecha */
+/* seccion de la derecha */
+
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+/* ajustar a pantallas con ancho menor o igual a 775px; */
+@media all and (max-width: 775px)
+{
+  #contenedorcentrado {
+      flex-direction:column-reverse;
+
+      min-width: 380px;
+      max-width: 900px;
+      width: 90%;
+
+      background-color: #5f6769;
+
+      /*opacity: 0.50;
+      filter: alpha(opacity=50);*/
+
+      border-radius: 10px 10px 10px 10px;
+      -moz-border-radius: 10px 10px 10px 10px;
+      -webkit-border-radius: 10px 10px 10px 10px;
+
+      -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+      box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+
+      padding: 30px;
+      box-sizing: border-box;
+  }
+  
+  #login {
+      margin: 0 auto;
+  }
+  
+  #derecho {
+      padding:20px 20px 20px 20px;
+  }
+  
+  #login label {
+      text-align: left;
+  }
+}
+
+/*-----------------CALENDARIO------------------*/

@@ -1,0 +1,1 @@
+<h1>PAGINA DE GALERIA </h1>
